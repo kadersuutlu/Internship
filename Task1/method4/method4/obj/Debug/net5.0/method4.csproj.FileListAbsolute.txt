@@ -1,0 +1,16 @@
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\method4.exe
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\method4.deps.json
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\method4.runtimeconfig.json
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\method4.runtimeconfig.dev.json
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\method4.dll
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\ref\method4.dll
+C:\internship\Task1\method4\method4\bin\Debug\net5.0\method4.pdb
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.csprojAssemblyReference.cache
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.GeneratedMSBuildEditorConfig.editorconfig
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.AssemblyInfoInputs.cache
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.AssemblyInfo.cs
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.csproj.CoreCompileInputs.cache
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.dll
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\ref\method4.dll
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.pdb
+C:\internship\Task1\method4\method4\obj\Debug\net5.0\method4.genruntimeconfig.cache

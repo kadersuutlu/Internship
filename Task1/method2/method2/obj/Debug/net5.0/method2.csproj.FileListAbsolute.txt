@@ -1,0 +1,16 @@
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\method2.exe
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\method2.deps.json
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\method2.runtimeconfig.json
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\method2.runtimeconfig.dev.json
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\method2.dll
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\ref\method2.dll
+C:\internship\Task1\method2\method2\bin\Debug\net5.0\method2.pdb
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.csprojAssemblyReference.cache
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.GeneratedMSBuildEditorConfig.editorconfig
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.AssemblyInfoInputs.cache
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.AssemblyInfo.cs
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.csproj.CoreCompileInputs.cache
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.dll
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\ref\method2.dll
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.pdb
+C:\internship\Task1\method2\method2\obj\Debug\net5.0\method2.genruntimeconfig.cache
