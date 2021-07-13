@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task_4</title>
+
+	<style>
+		*{
+			background-color:#f5f5dc;
+		}
+		.numbers{
+			width: 380px;
+			height: 30px;
+			font-size: 15pt;
+		}
+		button{
+			padding: 15px;
+			width: 74px;
+			background-color: #eec4c9;
+			font-family:"averia-sans-libre";
+			font-size: 15pt;
+		}
+		button:hover{
+			cursor:pointer;
+			background-color: slateblue;
+		}
+		.table{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.calculate{
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div align="center"><h1>HESAP MAKİNESİ UYGULAMASI</h1></div>
+	<div>
+			<table class="calculate">
+				<tr>
+					<td>
+						<input type="text" name="number" class="numbers" placeholder="0" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" id="clean" value="C">C</button>
+						<button type="button" value="*(0.01)">%</button>
+						<button type="button" value="%">mod</button>
+						<button type="button" value="/">/</button>
+						<button type="button" value="(">(</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" value="7">7</button>
+						<button type="button" value="8">8</button>
+						<button type="button" value="9">9</button>
+						<button type="button" value="*">x</button>
+						<button type="button" value=")">)</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" value="4">4</button>
+						<button type="button" value="5">5</button>
+						<button type="button" value="6">6</button>
+						<button type="button" value="-">-</button>
+						<button type="button" value="[">[</button>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" value="1">1</button>
+						<button type="button" value="2">2</button>
+						<button type="button" value="3">3</button>
+						<button type="button" value="+">+</button>
+						<button type="button" value="]">]</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" id="calculate" value="=">=</button>
+						<button type="button" value="0">0</button>
+						<button type="button" value=".">.</button>
+						<button type="button" value="√">√</button>
+						<button type="button"  value="^">xʸ</button>
+					</td>
+				</tr>
+			</table>
+	</div>
+	<script>
+		
+		let btn=document.getElementsByTagName("button");
+		
+		let text=document.getElementsByClassName("numbers")[0];
+		
+		let calculate=document.getElementById("calculate")
+		
+		let clean=document.getElementById("clean");
+		
+		for(var i=0;i<btn.length;i++){
+			if(i!=0 && i!=20){
+				btn[i].addEventListener("click",write);
+			}
+		}
+		
+		function write(){
+			
+			text.value=text.value+this.value;
+		}
+		
+		calculate.addEventListener("click",calculator);
+		
+		function calculator(){
+			text.value=eval(text.value);
+		}
+		
+		clean.addEventListener("click",cleaning)
+		
+		function cleaning(){
+			text.value="";
+		}
+		
+	</script>
+</body>
+</html>
