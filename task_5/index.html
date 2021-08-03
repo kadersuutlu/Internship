@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Yönetimi</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h3 class="header">Firebase ile Ürün Yönetimi Uygulaması</h3>
+        </header>
+        <form class="search">
+            <input type="search" id="search" placeholder="Ara" />
+            <button class="btn" id="btnSearch">Ara &#129488;</button>
+        </form>
+    </div>
+    <input type="text" name="productCode" id="productCode" placeholder="Ürün Kodu">
+    <input type="text" name="productName" id="productName" placeholder="Ürün Adı">
+    <input type="text" name="categoryName" id="categoryName" placeholder="Ürün Kategorisi">
+    <input type="text" name="productBrand" id="productBrand" placeholder="Ürün Markası">
+    <input type="text" name="productPrice" id="productPrice" placeholder="Ürün Fiyatı"><br>
+    <button class="btn" id="btnSave">Kaydet &#9989;</button>
+    <button class="btn" id="btnRemove">Sil </button>
+
+
+    <table class="table-products" id="table">
+        <thead>
+            <tr>
+                <th>Ürün Kodu</th>
+                <th>Ürün Adı</th>
+                <th>Ürün Kategorisi</th>
+                <th>Ürün Markası</th>
+                <th>Ürün Fiyatı</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCMVJFVKjYgopWoVnDwFH0U1S1xG_NCnDU",
+            authDomain: "productmanagementwithfirebase.firebaseapp.com",
+            databaseURL: "https://productmanagementwithfirebase-default-rtdb.firebaseio.com",
+            projectId: "productmanagementwithfirebase",
+            storageBucket: "productmanagementwithfirebase.appspot.com",
+            messagingSenderId: "37001800252",
+            appId: "1:37001800252:web:0a9a1983bae23787307139"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var product_code, product_name, category_name, product_brand, product_price;
+
+        function Ready() {
+            product_code = document.getElementById('productCode').value;
+            product_name = document.getElementById('productName').value;
+            category_name = document.getElementById('categoryName').value;
+            product_brand = document.getElementById('productBrand').value;
+            product_price = document.getElementById('productPrice').value;
+
+
+
+        }
+
+        const list = document.querySelector("#table");
+
+        document.getElementById('btnSave').onclick = function () {
+            Ready();
+            firebase.database().ref('product/' + product_code).set({
+                ProductCode: product_code,
+                ProductName: product_name,
+                CategoryName: category_name,
+                ProductBrand: product_brand,
+                ProductPrice: product_price
+            });
+
+            let tProductCode = document.createElement("td");
+            let tProductName = document.createElement("td");
+            let tCategoryName = document.createElement("td");
+            let tProductBrande = document.createElement("td");
+            let tProductPrice = document.createElement("td");
+
+            tProductCode.textContent = product_code;
+            tProductName.textContent = product_name;
+            tCategoryName.textContent = category_name;
+            tProductBrande.textContent = product_brand;
+            tProductPrice.textContent = product_price;
+
+            let tr = document.createElement("tr");
+
+            tr.appendChild(tProductCode);
+            tr.appendChild(tProductName);
+            tr.appendChild(tCategoryName);
+            tr.appendChild(tProductBrande);
+            tr.appendChild(tProductPrice);
+
+            list.appendChild(tr);
+        }
+
+
+
+        const database=firebase.database();
+        const rootRef=database.ref('products');
+
+        rootRef.on('value',function(snapshot){
+            snapshot.forEach(function(childSnapshot){
+                var data=childSnapshot.val();
+                var productCode=data.product_code;
+                var productName=data.product_name;
+                var categoryName=data.category_name;
+                var productBrand=data.product_brand;
+                var productPrice=data.product_price;
+            })
+        })
+var tbodyRef = document.getElementById('table').getElementsByTagName('tbody')[0];
+        /*
+                function searchTable() {
+                    var input, filter, found, table, tbody,i;
+                    input = document.getElementById("search");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("table");
+                    tbody = table.getElementsByTagName("tbody");
+                    for (i = 0; i < tbody.length; i++) {
+                        if (tbody[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            found = true;
+                        }
+                    }
+                    if (found) {
+                        tbody[i].style.display = "";
+                        found = false;
+                    } else {
+                        tbody[i].style.display = "none";
+                    }
+                }
+        */
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+* {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .container{
+            max-width: 50rem;
+            margin: 2rem auto;
+        }
+        .search {
+            text-align: center;
+            margin:auto
+        }
+        .table-products{
+            margin-left: auto;
+            margin-right: auto;
+        }
+table{
+     border: solid 1px #EBEBEB;
+     padding: 1rem;
+}
+        table, th , td {
+            padding: 1rem;
+            border: 1px solid black;
+        }
+
+        .btn {
+            background: white;
+            width: 5rem;
+            height: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            outline: none;
+        }
+        .btn:hover {
+            background: wheat;
+        }
+        
+  input{
+            height: 2.2rem;
+            margin-bottom: 1rem;
+            margin-left: 10px;
+            text-indent: .5rem;
+            outline:none;
+            border-radius: 1rem;
+
+        }
