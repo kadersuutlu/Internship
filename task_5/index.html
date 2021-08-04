@@ -8,6 +8,7 @@
     <title>Ürün Yönetimi</title>
     <link rel="stylesheet" href="./styles.css">
 
+
 </head>
 
 <body>
@@ -17,17 +18,16 @@
         </header>
         <form class="search">
             <input type="search" id="search" placeholder="Ara" />
-            <button class="btn" id="btnSearch">Ara &#129488;</button>
         </form>
     </div>
-    <input type="text" name="productCode" id="productCode" placeholder="Ürün Kodu">
-    <input type="text" name="productName" id="productName" placeholder="Ürün Adı">
-    <input type="text" name="categoryName" id="categoryName" placeholder="Ürün Kategorisi">
-    <input type="text" name="productBrand" id="productBrand" placeholder="Ürün Markası">
-    <input type="text" name="productPrice" id="productPrice" placeholder="Ürün Fiyatı"><br>
-    <button class="btn" id="btnSave">Kaydet &#9989;</button>
-    <button class="btn" id="btnRemove">Sil </button>
-
+        <input type="text" name="productCode" id="productCode" placeholder="Ürün Kodu">
+        <input type="text" name="productName" id="productName" placeholder="Ürün Adı">
+        <input type="text" name="categoryName" id="categoryName" placeholder="Ürün Kategorisi">
+        <input type="text" name="productBrand" id="productBrand" placeholder="Ürün Markası">
+        <input type="text" name="productPrice" id="productPrice" placeholder="Ürün Fiyatı"><br>
+        <button class="btn" id="btnSave">Kaydet &#9989;</button>
+        <button class="btn" id="btnRemove">Sil </button>
+ 
 
     <table class="table-products" id="table">
         <thead>
@@ -37,9 +37,10 @@
                 <th>Ürün Kategorisi</th>
                 <th>Ürün Markası</th>
                 <th>Ürün Fiyatı</th>
+                <th>Sil</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tablee">
 
         </tbody>
     </table>
@@ -96,6 +97,12 @@
                 ProductPrice: product_price
             });
 
+            addTable();
+
+        }
+
+        function addTable() {
+            Ready();
             let tProductCode = document.createElement("td");
             let tProductName = document.createElement("td");
             let tCategoryName = document.createElement("td");
@@ -119,22 +126,37 @@
             list.appendChild(tr);
         }
 
-
-
-        const database=firebase.database();
-        const rootRef=database.ref('products');
-
-        rootRef.on('value',function(snapshot){
-            snapshot.forEach(function(childSnapshot){
-                var data=childSnapshot.val();
-                var productCode=data.product_code;
-                var productName=data.product_name;
-                var categoryName=data.category_name;
-                var productBrand=data.product_brand;
-                var productPrice=data.product_price;
+        function get(){
+            var productsRef=database.ref('products/','');
+            productsRef.on('value',function(snapshot){
+                var data=snapshot.val();
+                console.log(data);
             })
-        })
-var tbodyRef = document.getElementById('table').getElementsByTagName('tbody')[0];
+        }
+
+/* 
+        function search(data) {
+            var ref = firebase.database().ref('products/');
+            ref.on('value', function (snapshot) {
+                snapshot.forEach(function (keysSnapshot) {
+                    var keys = keysSnapshot.val();
+                    if (keys['ProductName'] == data) {
+                        addTable(keys);
+                    }
+                    if (data.trim() == "") {
+                        updateTable();
+                    }
+                })
+            });
+        }
+
+
+
+        document.querySelector('#search').addEventListener('keypress', function (e) {
+            if (e.keys === 'Enter') {
+                search(this.value);
+            }
+        }); */
         /*
                 function searchTable() {
                     var input, filter, found, table, tbody,i;
@@ -157,6 +179,5 @@ var tbodyRef = document.getElementById('table').getElementsByTagName('tbody')[0]
         */
 
     </script>
-</body>
 
 </html>
