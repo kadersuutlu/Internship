@@ -15,17 +15,12 @@ const image = {uri: "https://i.pinimg.com/originals/1e/35/b8/1e35b89ff91df890c3d
 const OnBoard = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
-      {/* <StatusBar /> */}
       <ImageBackground style={{flex: 1, 
                                backgroundColor: colors.blue
                                }} source = {image}>
         <View style={style.details}>
-          {/* <Image
-            style={{height: 150}}
-            source={require('../../assets/ekonsoft-logo.jpg')}
-          /> */}
+         
           <Text style={style.about}>Created By</Text>
-          {/* <Image style={style.logo} source={require('../../assets/ekonsoft-icon.png')} /> */}
 
           <Text style={style.textName}>Gizem Coşkun</Text>
 
