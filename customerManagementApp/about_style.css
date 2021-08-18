@@ -1,0 +1,50 @@
+body{
+	background: url("img/bg.jpg");
+}
+.box{
+	width: 450px;
+	background: #2B7797;
+	color:white;
+	padding: 40px;
+	text-align: center;
+	margin: auto;
+	margin-top: 1%;
+	font-family: sans-serif;
+}
+.box img{
+	width: 200px;
+	height: 200px;
+	cursor:pointer;
+}
+.box h1{
+	font-size: 40px;
+	letter-spacing: 4px;
+	font-weight: 100;
+}
+.box h5{
+	margin-top: 15px;
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing: 3px;
+}
+.box p{
+	margin-top: 15px;
+	text-align: justify;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+.box li{
+	display: inline;
+	margin: 6px;
+	list-style: none;
+}
+.box li a{
+	color: white;
+	font-size: 60px;
+	transition: all ease-in-out 250ms;
+}
+.box li a:hover{
+	color:#b9b9b9;
+}

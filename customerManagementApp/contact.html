@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Başlıksız Belge</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="contact.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<script src="https://kit.fontawesome.com/c20485228a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="header">
+        <h2 class="logo">Müşteri / Proje Yönetim Paneli</h2>
+        <input type="checkbox" id="chk" >
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="index.php"><i class="fas fa-home icon"></i>Anasayfa</a>
+            <a href="about.php"><i class="fas fa-info icon"></i>Hakkımda</a>
+			<a href="contact.html"><i class="far fa-envelope icon"></i>İletişim</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+            <input type="button" onClick="location.href='login.php'" value="Giriş Yap">
+       </ul>
+	
+    </div>
+	<div class="container">
+  <div style="text-align:center">
+    <h2>İLETİŞİM</h2>
+    <p>Düşüncelerinizi buradan paylaşabilirsiniz...</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="img/about.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">Adınız</label>
+        <input type="text" id="fname" name="firstname" placeholder="Adınız..">
+        <label for="lname">Soyadınız</label>
+        <input type="text" id="lname" name="lastname" placeholder="Soyadınız..">
+        <label for="country">Ülke</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="turkey">Türkiye</option>
+        </select>
+        <label for="subject">Konu</label>
+        <textarea id="subject" name="subject" placeholder="Ne düşünüyorsunuz?.." style="height:170px"></textarea>
+        <input type="submit" value="Gönder">
+      </form>
+    </div>
+</div>
+	</div>
+</body>
+</html>
