@@ -49,9 +49,6 @@ eğitimleri alarak projeler geliştiriyorum. Okurken çalışmak, çalışırken
 	</div>
 
 	
-    <?php
-    
-
-    ?>
+   
 </body>
 </html>

@@ -34,7 +34,7 @@
 		if($_POST["username"]=="admin" && $_POST["password"]=="123456")
 		{
 			$_SESSION["user"]=$_POST["username"];
-			header("Location:project.php");
+			header("Location:projelistele.php");
 		}
 		else
 		{
